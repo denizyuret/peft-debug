@@ -1,0 +1,18 @@
+$ python ./train2.py --output_dir=out --num_train_epochs=1 --gradient_checkpointing=True --per_device_train_batch_size=1
+python ./train2.py --output_dir=out --num_train_epochs=1 --gradient_checkpointing=True --per_device_train_batch_size=1
+Loading checkpoint shards: 100% 2/2 [00:04<00:00,  2.16s/it]
+mistralai/Mistral-7B-v0.1 torch.bfloat16 cuda:0
+Detected kernel version 3.10.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+Training adapter1
+  0% 0/8 [00:00<?, ?it/s]You're using a LlamaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+/mnt/proj1/dd-23-171/dyuret/micromamba/envs/latest/lib/python3.12/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+{'train_runtime': 9.872, 'train_samples_per_second': 0.81, 'train_steps_per_second': 0.81, 'train_loss': 1.527357816696167, 'epoch': 1.0}
+100% 8/8 [00:09<00:00,  1.23s/it]
+{'train_runtime': 9.3335, 'train_samples_per_second': 0.857, 'train_steps_per_second': 0.857, 'train_loss': 1.5054534673690796, 'epoch': 1.0}
+100% 8/8 [00:09<00:00,  1.17s/it]
+Training adapter2
+{'train_runtime': 9.3445, 'train_samples_per_second': 0.856, 'train_steps_per_second': 0.856, 'train_loss': 1.527415156364441, 'epoch': 1.0}
+100% 8/8 [00:09<00:00,  1.17s/it]
+{'train_runtime': 9.3518, 'train_samples_per_second': 0.855, 'train_steps_per_second': 0.855, 'train_loss': 1.5060614347457886, 'epoch': 1.0}
+100% 8/8 [00:09<00:00,  1.17s/it]

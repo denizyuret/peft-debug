@@ -1,0 +1,18 @@
+$ ./train.py --output_dir=out --num_train_epochs=1 --gradient_checkpointing=True --per_device_train_batch_size=1
+./train.py --output_dir=out --num_train_epochs=1 --gradient_checkpointing=True --per_device_train_batch_size=1
+Loading checkpoint shards: 100% 2/2 [00:07<00:00,  3.54s/it]
+mistralai/Mistral-7B-v0.1 torch.bfloat16 cuda:0
+Detected kernel version 3.10.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+Training adapter1
+  0% 0/8 [00:00<?, ?it/s]You're using a LlamaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+/mnt/proj1/dd-23-171/dyuret/micromamba/envs/latest/lib/python3.12/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+{'train_runtime': 11.2237, 'train_samples_per_second': 0.713, 'train_steps_per_second': 0.713, 'train_loss': 1.527357816696167, 'epoch': 1.0}
+100% 8/8 [00:11<00:00,  1.40s/it]
+{'train_runtime': 9.3417, 'train_samples_per_second': 0.856, 'train_steps_per_second': 0.856, 'train_loss': 1.5054534673690796, 'epoch': 1.0}
+100% 8/8 [00:09<00:00,  1.17s/it]
+Training adapter2
+{'train_runtime': 9.3369, 'train_samples_per_second': 0.857, 'train_steps_per_second': 0.857, 'train_loss': 1.5291342735290527, 'epoch': 1.0}
+100% 8/8 [00:09<00:00,  1.17s/it]
+{'train_runtime': 9.3247, 'train_samples_per_second': 0.858, 'train_steps_per_second': 0.858, 'train_loss': 1.5291342735290527, 'epoch': 1.0}
+100% 8/8 [00:09<00:00,  1.17s/it]
